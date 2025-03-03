@@ -21,11 +21,9 @@ export const login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
 
-        // 1) Check if user exists
         const user = await User.findOne({ email }).select('+password');
         if (!user) return next(new Error('Invalid credentials', 401));
 
-        // 2) Check password
         const correctPassword = await bcrypt.compare(password, user.password);
         if (!correctPassword) return next(new Error('Invalid credentials', 401));
 
