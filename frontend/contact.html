@@ -73,7 +73,7 @@
 
     <section id="contact-form" class="section-p1">
         <h2>Send Us a Message</h2>
-        <form action="#" method="POST">
+        <form action="https://formsubmit.co/heroshop642@gmail.com" method="POST">
             <div class="form-group">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Email Address" required>
@@ -84,6 +84,9 @@
             <div class="form-group">
                 <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
             </div>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/frontend/index.html">
             <button type="submit" class="normal">Send Message</button>
         </form>
 
